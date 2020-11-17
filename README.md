@@ -1,6 +1,8 @@
-# Language Model Customization UI
+# IBM Watson Speech Services Customization UI
 
+This code is a user interface for IBM Watson Speech-To-Text and Text-To-Speech.
 
-Web UI to view, edit, test Language Model Customizations. 
+This will allow users to use the speech services' customization API features from a GUI.
 
-@afaisma@us.ibm.com   
+Developer: Alexander Faisman - afaisma@us.ibm.com
+Offering Manager: Marco Noel - marco.noel@ca.ibm.com   
