@@ -1,0 +1,9 @@
+This project has been enabled to run with IBM cloud developer CLI (https://console.bluemix.net/docs/cloudnative/dev_cli.html#developercli).
+
+To make full use of the files generated please note the following:
+
+* Helm charts and Kubernetes deployment files have readiness probes defined that require a health endpoint and port
+    * Expected port is 8080, default health endpoint is /health
+    * Default health endpoint can be enabled by adding the Spring Boot actuator to your build file (https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-actuator)
+* Docker support files and IBM cloud deloyment files assume artifact locations based on Spring Boot defaults
+    * Expected artifact location is target/sttcustomization-1.0-SNAPSHOT.jar

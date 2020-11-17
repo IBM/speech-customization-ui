@@ -1,0 +1,293 @@
+
+{  "ipaentries":
+[
+  {
+    "spr": "a",
+    "ipa": "a, ɑ, ɑː, ɐ ",
+    "examples": "father, lot ",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "A",
+    "ipa": "æ",
+    "examples": "back, had",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "e",
+    "ipa": "e",
+    "examples": "cake, pain",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "E",
+    "ipa": "ɛ",
+    "examples": "hedge, let",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "i",
+    "ipa": "i",
+    "examples": "see, speak, believe",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "I",
+    "ipa": "ɪ",
+    "examples": "pick, ill ",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "o",
+    "ipa": "o",
+    "examples": "both, oak",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "c",
+    "ipa": "ɔ",
+    "examples": "law, cough",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "u",
+    "ipa": "u",
+    "examples": "zoo, truth",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "U",
+    "ipa": "ʊ",
+    "examples": "took, put",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "H",
+    "ipa": "ʌ",
+    "examples": "but, mug, son",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "R",
+    "ipa": "ə˞",
+    "examples": "butter, hurt",
+    "group": "Regular vowels"
+  },
+  {
+    "spr": "",
+    "ipa": "",
+    "examples": "",
+    "group": ""
+  },
+  {
+    "spr": "O",
+    "ipa": "ɔɪ",
+    "examples": "toil, boy",
+    "group": "Diphtongs"
+  },
+  {
+    "spr": "W",
+    "ipa": "aʊ",
+    "examples": "out, cow",
+    "group": "Diphtongs"
+  },
+  {
+    "spr": "Y",
+    "ipa": "aɪ",
+    "examples": "life, fine",
+    "group": "Diphtongs"
+  },
+  {
+    "spr": "",
+    "ipa": "",
+    "examples": "",
+    "group": ""
+  },
+  {
+    "spr": "x",
+    "ipa": "ə",
+    "examples": "sofa, alone, suppose, tedious, America",
+    "group": "Reduced Vowels"
+  },
+  {
+    "spr": "X",
+    "ipa": "ɨ",
+    "examples": "roses, connect, melody, symphony, hint ed",
+    "group": "Reduced Vowels"
+  },
+  {
+    "spr": "",
+    "ipa": "",
+    "examples": "",
+    "group": ""
+  },
+  {
+    "spr": "b",
+    "ipa": "b",
+    "examples": "bad, sob",
+    "group": "Consonants"
+  },
+  {
+    "spr": "p",
+    "ipa": "p",
+    "examples": "pit, rip",
+    "group": "Consonants"
+  },
+  {
+    "spr": "d",
+    "ipa": "d",
+    "examples": "dip, had",
+    "group": "Consonants"
+  },
+  {
+    "spr": "t",
+    "ipa": "t",
+    "examples": "tip, pet",
+    "group": "Consonants"
+  },
+  {
+    "spr": "g",
+    "ipa": "g",
+    "examples": "good, bug",
+    "group": "Consonants"
+  },
+  {
+    "spr": "k",
+    "ipa": "k",
+    "examples": "kill, cat, make, back",
+    "group": "Consonants"
+  },
+  {
+    "spr": "D",
+    "ipa": "ð",
+    "examples": "this, breathe",
+    "group": "Consonants"
+  },
+  {
+    "spr": "T",
+    "ipa": "θ",
+    "examples": "thing, Beth",
+    "group": "Consonants"
+  },
+  {
+    "spr": "v",
+    "ipa": "v",
+    "examples": "vase, save",
+    "group": "Consonants"
+  },
+  {
+    "spr": "f",
+    "ipa": "f",
+    "examples": "field, if, graph",
+    "group": "Consonants"
+  },
+  {
+    "spr": "z",
+    "ipa": "z",
+    "examples": "zip, phase",
+    "group": "Consonants"
+  },
+  {
+    "spr": "s",
+    "ipa": "s",
+    "examples": "seal, miss, ceiling",
+    "group": "Consonants"
+  },
+  {
+    "spr": "Z",
+    "ipa": "ʒ",
+    "examples": "treasure, garage",
+    "group": "Consonants"
+  },
+  {
+    "spr": "S",
+    "ipa": "ʃ",
+    "examples": "ship, wish",
+    "group": "Consonants"
+  },
+  {
+    "spr": "J",
+    "ipa": "dʒ",
+    "examples": "Jane, huge",
+    "group": "Consonants"
+  },
+  {
+    "spr": "C",
+    "ipa": "tʃ",
+    "examples": "chip, witch, nature",
+    "group": "Consonants"
+  },
+  {
+    "spr": "h",
+    "ipa": "h",
+    "examples": "hot, hero, challah",
+    "group": "Consonants"
+  },
+  {
+    "spr": "m",
+    "ipa": "m",
+    "examples": "man, hum, summer",
+    "group": "Consonants"
+  },
+  {
+    "spr": "n",
+    "ipa": "n",
+    "examples": "never, sun, winner",
+    "group": "Consonants"
+  },
+  {
+    "spr": "G",
+    "ipa": "ŋ",
+    "examples": "sing, finger",
+    "group": "Consonants"
+  },
+  {
+    "spr": "r",
+    "ipa": "r",
+    "examples": "borrow, rake",
+    "group": "Consonants"
+  },
+  {
+    "spr": "l",
+    "ipa": "l",
+    "examples": "low, hall",
+    "group": "Consonants"
+  },
+  {
+    "spr": "w",
+    "ipa": "w",
+    "examples": "wear, quick",
+    "group": "Consonants"
+  },
+  {
+    "spr": "y",
+    "ipa": "j",
+    "examples": "yes, Virginia",
+    "group": "Consonants"
+  },
+  {
+    "spr": "M",
+    "ipa": "m̩",
+    "examples": "hmmm",
+    "group": "Consonants"
+  },
+  {
+    "spr": "? (glottal stop)",
+    "ipa": "ʔ",
+    "examples": "kitten, Latin",
+    "group": "Consonants"
+  },
+  {
+    "spr": "F (flap)",
+    "ipa": "ɾ",
+    "examples": "writer, fiddle",
+    "group": "Consonants"
+  },
+  {
+    "spr": "N (syllabic nasal)",
+    "ipa": "n̩",
+    "examples": "button, satin, eaten, burden",
+    "group": "Consonants"
+  }
+]
+}

@@ -1,0 +1,12 @@
+host: sttcustomizationui
+domain: us-east.mybluemix.net
+applications:
+- instances: 2
+  timeout: 180
+  name: sttcustomization
+  path: ./target/sttcustomization-1.0-SNAPSHOT.jar
+  buildpack: java_buildpack
+  command: ""
+  memory: 2048M
+  domain: us-east.mybluemix.net
+  host: sttcustomizationui
