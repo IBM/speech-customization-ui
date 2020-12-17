@@ -21,3 +21,11 @@ How to install the STT UI and run it:
 6. Open your browser, then go to "http://localhost:8080"
 
 If the server is not starting, check if port 8080 is already used by another process (eg. Apache Web Server)
+
+As a bonus, here is an STT Hands-On Lab with sample data:
+- https://www.ibm.com/demos/live/content/watson/stt/lab/hands-on-lab-customization.pdf
+- https://www.ibm.com/demos/live/content/watson/stt/lab/lab-materials.zip
+
+You can also go to our great demo sites:
+- STT demo: https://www.ibm.com/demos/live/speech-to-text/sales/home
+- TTS demo: https://www.ibm.com/demos/live/tts-demo/sales/home
