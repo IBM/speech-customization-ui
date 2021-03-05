@@ -20,7 +20,10 @@ How to install the STT UI and run it:
 5. Launch the server: run the command "mvn spring-boot:run"
 6. Open your browser, then go to "http://localhost:8080"
 
-If the server is not starting, check if port 8080 is already used by another process (eg. Apache Web Server)
+If the server is not starting, check if port 8080 is already used by another process (eg. Apache Web Server).
+If you wish to use a different port than 8080, run the following command to launch the server
+- mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=<port_number>
+
 
 As a bonus, here is an STT Hands-On Lab with sample data:
 - https://www.ibm.com/demos/live/content/watson/stt/lab/hands-on-lab-customization.pdf
