@@ -83,9 +83,9 @@ curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https:
 public class RestClientTTS {
     private static final Logger logger = LoggerFactory.getLogger(RestClientTTS.class);
 
-    private String host = "https://gateway-s.watsonplatform.net/text-to-speech/api/v1";
-    private String user = "bdb86865-60a4-4e42-bfa8-4c91dfd583d2";
-    private String password = "L3MIsuh4AGpz";
+    private String host = "URL";
+    private String user = "login";
+    private String password = "password";
 
     public void setHost(String host) {
         this.host = host;
