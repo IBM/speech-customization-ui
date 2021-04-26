@@ -19,67 +19,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.nio.charset.Charset;
 
-// GetVoices
-//curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https://stream-d.watsonplatform.net/text-to-speech/api/v1/voices"
-
-// GetWords (Keerthana pstg)
-// curl -X get -v -u bdb86865-60a4-4e42-bfa8-4c91dfd583d2:L3MIsuh4AGpz " https://stream-s.watsonplatform.net/text-to-speech/api/v1/customizations/71f886d1-4276-4a32-ba81-cf477d8ff1f5"
-
-// GetCustomizations (Keerthana pstg)
-//curl -k -v -X GET -u bdb86865-60a4-4e42-bfa8-4c91dfd583d2:L3MIsuh4AGpz "https://stream-s.watsonplatform.net/text-to-speech/api/v1/customizations"
-
-// works
-// curl -X GET  -u "bdb86865-60a4-4e42-bfa8-4c91dfd583d2:L3MIsuh4AGpz" --output hello_world.wav "https://stream-s.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/wav&text=Hello%20world&voice=en-US_AllisonVoice&customization_id=71f886d1-4276-4a32-ba81-cf477d8ff1f5"
-
-
-// GetCustomizations
-//curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https://stream-d.watsonplatform.net/text-to-speech/api/v1/customizations"
-
-//../text-to-speech/api/v1/pronunciation?text=IEEE&voice=es-LA_SofiaVoice&format=ipa&customization_id=3c2b4878-9690-4df9-86b2-cd5fb440b12a
-//where cust voice id=3c2b4878-9690-4df9-86b2-cd5fb440b12a
-//voice name=es-LA_SofiaVoice
-//phoneme format=ipa
-//the expected output is
-//`{
-//  "pronunciation": ".ˈi .ˈtɾi.ple .e"
-//}`
-//assuming that the custom voice (id=3c2b4878-9690-4df9-86b2-cd5fb440b12a) has IEEE the pronunciation defined as "I tripe E"
-//otherwise, the output will be
-//`{
-//  "pronunciation": ".ˈi .ˈe .ˈe .ˈe"}`
-//
-
-/*
-.../text-to-speech/api/v1/pronunciation?text=IEEE&voice=es-LA_SofiaVoice&format=ipa&customization_id=3c2b4878-9690-4df9-86b2-cd5fb440b12a
-where cust voice id=3c2b4878-9690-4df9-86b2-cd5fb440b12a
-voice name=es-LA_SofiaVoice
-phoneme format=ipa
-the expected output is
-`{
- "pronunciation": ".ˈi .ˈtɾi.ple .e"
-}`
-assuming that the custom voice (id=3c2b4878-9690-4df9-86b2-cd5fb440b12a) has IEEE the pronunciation defined as "I tripe E"
-otherwise, the output will be
-`{
- "pronunciation": ".ˈi .ˈe .ˈe .ˈe"}`
-curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https://stream-d.watsonplatform.net/text-to-speech/api/v1/pronunciation?text=IEEE&voice=es-LA_SofiaVoice&format=ipa"
-curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https://stream-d.watsonplatform.net/text-to-speech/api/v1/pronunciation?text=IEEE&voice=es-LA_SofiaVoice&format=spr"
-curl -k -v -X GET -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" "https://stream-d.watsonplatform.net/text-to-speech/api/v1/voices
- */
-
-//
-// curl -X POST -u "1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw" --header "Content-Type: application/json" --header "Accept: audio/wav" --data "{\"text\":\"IEEE\"}" --output IEEE.wav "https://stream-d.watsonplatform.net/text-to-speech/api/v1/synthesize?voice=en-US_AllisonVoice&customization_id=15d6c8c3-180e-4683-a181-b200dd237cfc"
-
-// works
-// curl -X GET  -u "08a2150c-2450-4a70-8278-54c8cb024343:vVn0t2tn4Mq0" --output hello_world.wav "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/wav&text=Hello%20world&voice=en-US_AllisonVoice"
-
-
-//curl -X POST -u bdb86865-60a4-4e42-bfa8-4c91dfd583d2:L3MIsuh4AGpz --header "Content-Type: application/json" --data "{\"words\":[{\"word\":\"EEE\", \"translation\":\"wwwwwwwww\"} ]}" "https://stream-s.watsonplatform.net/text-to-speech/api/v1/validation"
-
-//curl -X POST -u bdb86865-60a4-4e42-bfa8-4c91dfd583d2:L3MIsuh4AGpz --header "Content-Type: application/json" --data "{\"words\":[{\"word\":\"EEE\", \"translation\":\"<phoneme alphabet=\\\"ipa\\\" ph=\\\"təmˈɑto\\\"></phoneme>\"} ]}" "https://stream-s.watsonplatform.net/text-to-speech/api/v1/validation"
-//təmˈɑto
-
-
 public class RestClientTTS {
     private static final Logger logger = LoggerFactory.getLogger(RestClientTTS.class);
 
