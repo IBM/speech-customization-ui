@@ -64,8 +64,6 @@ public class LoginAMLegacy extends VerticalLayout {
         String requestUrl = currentRequest.getRequestURL().toString();
 
         if (requestUrl.contains("localhost")) {
-            //textFieldUser.setValue("6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57");
-            //passwordField.setValue("RxbAIKqEHUQV");
         }
 
 
@@ -125,21 +123,21 @@ public class LoginAMLegacy extends VerticalLayout {
 
         if (requestUrl.contains("localhost")) {
             Button btn1 = new Button("Keerthana's", e -> {
-                VaadinSession.getCurrent().setAttribute("username", "6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57");
-                VaadinSession.getCurrent().setAttribute("password", "RxbAIKqEHUQV");
-                VaadinSession.getCurrent().setAttribute("url", "https://gateway-s.watsonplatform.net/speech-to-text/api/v1");
+                VaadinSession.getCurrent().setAttribute("username", "user");
+                VaadinSession.getCurrent().setAttribute("password", "password");
+                VaadinSession.getCurrent().setAttribute("url", "url");
                 getUI().ifPresent(ui -> ui.navigate("mainam"));
             });
             Button btn2 = new Button("Alex's regular", e -> {
-                VaadinSession.getCurrent().setAttribute("username", "1ea95ff0-7ade-41ff-97d5-04a6db89bf99");
-                VaadinSession.getCurrent().setAttribute("password", "Yvi4yiUJXrqa");
-                VaadinSession.getCurrent().setAttribute("url", "https://gateway.watsonplatform.net/speech-to-text/api/v1");
+                VaadinSession.getCurrent().setAttribute("username", "user");
+                VaadinSession.getCurrent().setAttribute("password", "password");
+                VaadinSession.getCurrent().setAttribute("url", "url");
                 getUI().ifPresent(ui -> ui.navigate("mainam"));
             });
             Button btn3 = new Button("Dev", e -> {
-                VaadinSession.getCurrent().setAttribute("username", "1caa1631-0ff4-44d9-ae8c-f1a8731947f0");
-                VaadinSession.getCurrent().setAttribute("password", "MJlT5vRDL6Xw");
-                VaadinSession.getCurrent().setAttribute("url", "https://gateway-d.watsonplatform.net/speech-to-text/api/v1");
+                VaadinSession.getCurrent().setAttribute("username", "user");
+                VaadinSession.getCurrent().setAttribute("password", "password");
+                VaadinSession.getCurrent().setAttribute("url", "url");
                 getUI().ifPresent(ui -> ui.navigate("mainam"));
             });
             HorizontalLayout hl = new HorizontalLayout(btn1, btn2, btn3);
@@ -157,13 +155,13 @@ public class LoginAMLegacy extends VerticalLayout {
         if (val == null)
             return;
         if (val.equalsIgnoreCase("Prod")) {
-            VaadinSession.getCurrent().setAttribute("url", "https://gateway.watsonplatform.net/speech-to-text/api/v1");
+            VaadinSession.getCurrent().setAttribute("url", "url");
         }
         if (val.equalsIgnoreCase("Stg")) {
-            VaadinSession.getCurrent().setAttribute("url", "https://gateway-s.watsonplatform.net/speech-to-text/api/v1");
+            VaadinSession.getCurrent().setAttribute("url", "url");
         }
         if (val.equalsIgnoreCase("Dev")) {
-            VaadinSession.getCurrent().setAttribute("url", "https://gateway-d.watsonplatform.net/speech-to-text/api/v1");
+            VaadinSession.getCurrent().setAttribute("url", "url");
         }
     }
 

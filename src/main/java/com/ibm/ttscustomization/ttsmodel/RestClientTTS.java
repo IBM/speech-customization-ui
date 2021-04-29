@@ -246,41 +246,7 @@ public class RestClientTTS {
         }
     }
 
-//    public JSONArray validatePronunciations(JSONArray jsaWords, String language) {
-//        HttpHeaders headers = createHeaders();
-//        headers.setContentType(MediaType.APPLICATION_JSON);
-//        HttpEntity<String> request = new HttpEntity<>(jsonObject.toString(), headers);
-//        RestTemplate restTemplate = creatRestTemplate();
-//        ResponseEntity<String> response = restTemplate.exchange(host + "/customizations/" + customization_id , HttpMethod.POST, request, String.class);
-//        return response.getBody();
-//    }
 
-
-//    /// !!!!!!!!!!!!!!!!!
-//    public static JSONArray validatePronunciations(JSONArray jsonWords, String language, JSONArray errors) {
-//
-//        WebTarget webTarget = client.target(uri).queryParam("voice", vi.voice);
-//        logger.info(String.format("validatePronunciations is about to send %s request %s", prefix.toUpperCase(), webTarget.getUri().toString()));
-//
-//        Invocation.Builder builder = webTarget.request(MediaType.APPLICATION_JSON);
-//        JSONObject jsonRequest = new JSONObject();
-//        jsonRequest.put("words",  jsonWords);
-//        Response response = builder.post(Entity.entity(jsonRequest.toString(3), MediaType.APPLICATION_JSON));
-//        int status = response.getStatus();
-//        String responseBody = response.readEntity(String.class);
-//        client.close();
-//
-//        if(status == 200 || status == 302) {
-//            JSONObject jsonResponse = new JSONObject(responseBody);
-//            return jsonResponse.getJSONArray("words");
-//        }
-//        else {
-//            String error = Constants.ERRORS.FAILED_TO_VALIDATE_PRONUNCIATIONS;
-//            errors.put(error);
-//            logger.error(error);
-//            return null;
-//        }
-//    }
 
 
 }

@@ -36,139 +36,13 @@ import java.net.URI;
 import java.nio.charset.Charset;
 
 
-// curl -v -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations"
-
-//        Create language model
-//        curl -v -u user:pwd -X POST --header "Content-Type:application/json"  --data "{\"name\":\"model name\",\"base_model_name\":\"en-US_BroadbandModel\",\"description\":\"model description\"}" https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations
-//
-//        Add a word using POST API
-//        curl -v -u user:pwd -X POST --header "Content-Type:application/json" --data "{\"words\": [{\"sounds_like\": [\"i triple e\"],\"word\": \"ieee\",\"display_as\": \"IEEE\"}]}" "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/words"
-//
-//        Add a word using PUT API
-//        curl -v -u user:pwd -X PUT --header "Content-Type:application/json" --data "{\"display_as\": \"word\",\"sounds_like\": [\"a word\"]}" "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/words/aword"
-//
-//        Check words status
-//        curl -v -u user:pwd -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/words"
-//
-//        Add a corpus
-//        curl -v -u user:pwd -X POST --header "Content-Type:application/json" --data-binary @corpus.txt "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/corpora/corpus1"
-//
-//        Check corpora status
-//        curl -v -u user:pwd -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/corpora"
-//
-//        Add a grammar
-//        curl -v -u user:pwd -X POST --header "Content-Type:application/json" --data-binary @corpus.txt "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/grammars/grammar1"
-//
-//        Check grammars status
-//        curl -v -u user:pwd -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/grammars"
-//
-//        Check model status
-//        curl -v -u user:pwd -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}"
-//
-//        Train the model
-//        curl -v -u user:pwd -X POST "https://stream-d.watsonplatform.net/speech-to-text/api/v1/customizations/${customization_id}/train"
-
-
-//curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/customizations?language=en-US"
-
-//curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations?language=en-US"
-
-// WORDS
-// custid=298f99bb-24fe-4437-91cc-e5f05c8f45ce
-// curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/customizations/298f99bb-24fe-4437-91cc-e5f05c8f45ce/words"
-
-// japanese model example
-// curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/customizations/21cf8c5c-f456-49ed-b6d5-50235ca593ad/words"
-
-// word - optional field error (String (JSONObject) - may ber formatted
-
-// corpora (list of corpus files)
-// curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/customizations/298f99bb-24fe-4437-91cc-e5f05c8f45ce/corpora"
-
-// grammars (list of grammar files)
-// curl -X GET -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV  "https://stream-s.watsonplatform.net/speech-to-text/api/v1/customizations/c43ca679-b91d-4301-998a-418874f18a6d/grammars"
-
-
-
-// curl -v -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV -X GET "https://stream-s.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations/e2db7b61-abe8-4c03-9422-72577d65cb6d/audio"
-
-// {
-//   "total_minutes_of_audio": 0.12,
-//   "audio": [{
-//      "duration": 7,
-//      "name": "audio_name_1",
-//      "details": {
-//         "codec": "pcm_s16le",
-//         "type": "audio",
-//         "frequency": 8000
-//      },
-//      "status": "ok"
-//   }]
-//}
-
-// curl -v -u 6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV -X GET "https://stream-s.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations/e876f6d2-dd16-49c1-ad10-64a70475957c/audio"
-//{
-//   "total_minutes_of_audio": 60.73,
-//   "audio": [
-//      {
-//         "duration": 790,
-//         "name": "audio_file_2",
-//         "details": {
-//            "type": "archive",
-//            "compression": "gzip"
-//         },
-//         "status": "ok"
-//      },
-//      {
-//         "duration": 1134,
-//         "name": "audio_file_1",
-//         "details": {
-//            "type": "archive",
-//            "compression": "gzip"
-//         },
-//         "status": "ok"
-//      },
-//      {
-//         "duration": 1027,
-//         "name": "audio_file_3",
-//         "details": {
-//            "type": "archive",
-//            "compression": "gzip"
-//         },
-//         "status": "ok"
-//      },
-//      {
-//         "duration": 693,
-//         "name": "audio_file_4",
-//         "details": {
-//            "type": "archive",
-//            "compression": "gzip"
-//         },
-//         "status": "ok"
-//      }
-//   ]
-//}
-
-// DEV: curl -v -u 1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations"
-// DEV: curl -v -u 1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations/62ad348e-3bbd-4009-b079-3cacb14e377d/audio/audio_name_1"
-// λ curl -v -u 1caa1631-0ff4-44d9-ae8c-f1a8731947f0:MJlT5vRDL6Xw -X GET "https://stream-d.watsonplatform.net/speech-to-text/api/v1/acoustic_customizations/99a35490-a1c8-4a38-b8ae-a6fc2a99d724/audio"
-//{
-//   "total_minutes_of_audio": 0,
-//   "audio": [{
-//      "duration": 0,
-//      "name": "ira.wav",
-//      "details": {},
-//      "status": "being_processed"
-//   }]
-//}
-// c97062
 
 public class RestClient {
     private static final Logger logger = LoggerFactory.getLogger(RestClient.class);
 
-    private String host = "https://gateway-s.watsonplatform.net/speech-to-text/api/v1";
-    private String user = "6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57";
-    private String password = "RxbAIKqEHUQV";
+    private String host = "url";
+    private String user = "user";
+    private String password = "password";
 
     public void setHost(String host) {
         this.host = host;
@@ -514,10 +388,6 @@ public class RestClient {
         }
     }
 
-
-    //curl -X POST -u "6ab3b8d3-2d62-4243-b4a0-5b976ec0aa57:RxbAIKqEHUQV" -F file=@arl081.wav "http://169.61.111.114:8080/transcribe?model=en-US_BroadbandModel&retain_transcript=false"
-    //
-    //private String speechHubHost = "http://169.61.111.114:8080/transcribe";
     private String speechHubHost = "http://localhost:9090/transcribe";
 
     public String recognizeLMSpeechHub(InputStream inputStream, String customizationId, String sBaseModel, String sFileName) throws GenericException {
@@ -552,31 +422,9 @@ public class RestClient {
 
         return "";
 
-
-//        ResponseEntity<String> response = null;
-//        try {
-//            HttpHeaders headers = createHeaders();
-//            //headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-//            //headers.setContentType(MediaType.valueOf("audio/wav"));
-//            HttpEntity<byte[]> entity = new HttpEntity(IOUtils.toByteArray(inputStream), headers);
-//
-//            if (customizationId != null)
-//                response = restTemplate.postForEntity(speechHubHost + "?customization_id=" + customizationId + "&model=" + sBaseModel, entity, String.class);
-//            else
-//                response = restTemplate.postForEntity(speechHubHost + "?model=" + sBaseModel, entity, String.class);
-//            return response.getBody();
-//        } catch (HttpStatusCodeException httpStatusCodeException) {
-//            String responseString = httpStatusCodeException.getResponseBodyAsString();
-//            JSONObject jso = new JSONObject((responseString));
-//            logger.error(String.format(Constants.ERRORS.FAILED_TO_DECODE_FILE, customizationId, responseString, sFileName));
-//            throw new GenericException(jso, httpStatusCodeException, GenericException.ErrorCode.HTTPSTATUSCODEEXCEPTION);
-//        } catch (Exception e) {
-//            throw new GenericException(e.getMessage(), e, GenericException.ErrorCode.GENERAL);
-//        }
     }
 
 
-    // "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&word_alternatives_threshold=0.9&keywords=%22colorado%22%2C%22tornado%22%2C%22tornadoes%22&keywords_threshold=0.5"
     public String recognizeAM(InputStream inputStream, String customizationId, String sBaseModel, String sFileName) throws GenericException {
         ResponseEntity<String> response = null;
         try {
@@ -604,7 +452,6 @@ public class RestClient {
     }
 
 
-    // "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&word_alternatives_threshold=0.9&keywords=%22colorado%22%2C%22tornado%22%2C%22tornadoes%22&keywords_threshold=0.5"
     public String recognizeLM(InputStream inputStream, String customizationId, String sBaseModel, String sFileName) throws GenericException {
         ResponseEntity<String> response = null;
         try {

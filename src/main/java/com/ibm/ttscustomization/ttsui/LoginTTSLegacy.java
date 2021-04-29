@@ -61,8 +61,6 @@ public class LoginTTSLegacy extends VerticalLayout {
         String requestUrl = currentRequest.getRequestURL().toString();
 
         if (requestUrl.contains("localhost")) {
-            //textFieldUser.setValue("e9d232fd-7d1f-4c2d-beae-2eda3acf8c00");
-            //passwordField.setValue("gSaIQFb0lX3c");
         }
 
 
@@ -124,27 +122,27 @@ public class LoginTTSLegacy extends VerticalLayout {
 
         if (requestUrl.contains("localhost")) {
             Button btn1 = new Button("Keerthana's", e -> {
-                VaadinSession.getCurrent().setAttribute("usernametts", "bdb86865-60a4-4e42-bfa8-4c91dfd583d2");
-                VaadinSession.getCurrent().setAttribute("passwordtts", "L3MIsuh4AGpz");
-                VaadinSession.getCurrent().setAttribute("urltts", "https://gateway-s.watsonplatform.net/text-to-speech/api/v1");
+                VaadinSession.getCurrent().setAttribute("usernametts", "user");
+                VaadinSession.getCurrent().setAttribute("passwordtts", "password");
+                VaadinSession.getCurrent().setAttribute("urltts", "url");
                 getUI().ifPresent(ui -> ui.navigate("maintts"));
             });
             Button btn2 = new Button("Alex's regular", e -> {
-                VaadinSession.getCurrent().setAttribute("usernametts", "e9d232fd-7d1f-4c2d-beae-2eda3acf8c00");
-                VaadinSession.getCurrent().setAttribute("passwordtts", "gSaIQFb0lX3c");
-                VaadinSession.getCurrent().setAttribute("urltts", "https://gateway-s.watsonplatform.net/text-to-speech/api/v1");
+                VaadinSession.getCurrent().setAttribute("usernametts", "user");
+                VaadinSession.getCurrent().setAttribute("passwordtts", "password");
+                VaadinSession.getCurrent().setAttribute("urltts", "url");
                 getUI().ifPresent(ui -> ui.navigate("maintts"));
             });
             Button btn3 = new Button("Alex's lite", e -> {
-                VaadinSession.getCurrent().setAttribute("usernametts", "74d51a8a-c224-4276-8d18-50b621707382");
-                VaadinSession.getCurrent().setAttribute("passwordtts", "NOJyVJKozxIM");
-                VaadinSession.getCurrent().setAttribute("urltts", "https://gateway-s.watsonplatform.net/text-to-speech/api/v1");
+                VaadinSession.getCurrent().setAttribute("usernametts", "user");
+                VaadinSession.getCurrent().setAttribute("passwordtts", "password");
+                VaadinSession.getCurrent().setAttribute("urltts", "url");
                 getUI().ifPresent(ui -> ui.navigate("maintts"));
             });
             Button btn4 = new Button("Alex's prod", e -> {
-                VaadinSession.getCurrent().setAttribute("usernametts", "08a2150c-2450-4a70-8278-54c8cb024343");
-                VaadinSession.getCurrent().setAttribute("passwordtts", "vVn0t2tn4Mq0");
-                VaadinSession.getCurrent().setAttribute("urltts", "https://gateway.watsonplatform.net/text-to-speech/api/v1");
+                VaadinSession.getCurrent().setAttribute("usernametts", "user");
+                VaadinSession.getCurrent().setAttribute("passwordtts", "password");
+                VaadinSession.getCurrent().setAttribute("urltts", "url1");
                 getUI().ifPresent(ui -> ui.navigate("maintts"));
             });
             HorizontalLayout hl = new HorizontalLayout(btn1, btn2, btn3, btn4);
@@ -162,13 +160,13 @@ public class LoginTTSLegacy extends VerticalLayout {
         if (val == null)
             return;
         if (val.equalsIgnoreCase("Prod")) {
-            VaadinSession.getCurrent().setAttribute("urltts", "https://gateway.watsonplatform.net/text-to-speech/api/v1");
+            VaadinSession.getCurrent().setAttribute("urltts", "url");
         }
         if (val.equalsIgnoreCase("Stg")) {
-            VaadinSession.getCurrent().setAttribute("urltts", "https://gateway-s.watsonplatform.net/text-to-speech/api/v1");
+            VaadinSession.getCurrent().setAttribute("urltts", "url");
         }
         if (val.equalsIgnoreCase("Dev")) {
-            VaadinSession.getCurrent().setAttribute("urltts", "https://gateway-d.watsonplatform.net/text-to-speech/api/v1");
+            VaadinSession.getCurrent().setAttribute("urltts", "url");
         }
     }
 
